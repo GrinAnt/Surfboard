@@ -1,0 +1,34 @@
+.reviews-card {
+  display: flex;
+  align-items: center;
+  background-color: $bg_grey;
+  padding: 42px;
+  margin-bottom: 15px;
+
+  &__img {
+    margin-right: 40px;
+  }
+
+  &__subject {
+    font-size: 27px;
+    line-height: 1.18;
+    color: $dark_grey;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    max-width: 463px;
+    font-size: 18px;
+    line-height: 1.22;
+    font-weight: 400;
+    color: $grey;
+    margin-bottom: 25px;
+  }
+
+  &__name {
+    font-size: 18px;
+    line-height: 1.33;
+    font-weight: 500;
+    color: $dark_grey;
+  }
+}

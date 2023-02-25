@@ -1,0 +1,19 @@
+.reviews-control {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    margin-right: 6px;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+}
+
+.reviews-control__item--active .reviews-control__avatar {
+  outline: 6px solid $btn_bg;
+  outline-offset: -6px;
+}

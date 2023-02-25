@@ -1,0 +1,16 @@
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  color: $btn_color;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.1;
+  background-color: $btn_bg;
+  padding: 21px 41px;
+  border-radius: 100px;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: $btn_hover;
+  }
+}

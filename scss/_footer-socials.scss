@@ -1,0 +1,32 @@
+.footer-socials {
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 14px;
+  }
+
+  &__link {
+    width: 20px;
+    height: 20px;
+    transition: 0.6s;
+  }
+
+  &__link::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+  }
+
+  @each $social in (vk, fb, ins, tw) {
+    &__link--#{$social} {
+      background: url("../img/icons/#{$social}.svg") center center no-repeat;
+
+      &:hover {
+        background: url("../img/icons/#{$social}-hover.svg") center center no-repeat;
+      }
+    }
+  }
+}

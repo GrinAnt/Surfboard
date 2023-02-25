@@ -1,0 +1,18 @@
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navigation__item {
+  padding-right: 22px;
+}
+
+.navigation__link {
+  color: $white_color;
+  transition: color 0.4s;
+
+  &:hover {
+    color: $hover;
+  }
+}
