@@ -9,10 +9,10 @@
 }
 
 .navigation__link {
-  color: $white_color;
+  color: $white;
   transition: color 0.4s;
 
   &:hover {
-    color: $hover;
+    color: $yellow;
   }
 }

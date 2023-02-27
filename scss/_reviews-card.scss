@@ -1,7 +1,7 @@
 .reviews-card {
   display: flex;
   align-items: center;
-  background-color: $bg_grey;
+  background-color: $grayish;
   padding: 42px;
   margin-bottom: 15px;
 
@@ -12,6 +12,7 @@
   &__subject {
     font-size: 27px;
     line-height: 1.18;
+    font-weight: 700;
     color: $dark_grey;
     margin-bottom: 14px;
   }

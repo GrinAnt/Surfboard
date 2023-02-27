@@ -1,27 +1,4 @@
 .hero {
-  color: $white_color;
-  max-width: 50%;
-  // position: absolute;
-  // top: 45%;
-  // left: 50%;
-  // transform: translateY(-45%);
-  margin: auto 0;
-
-  &__desc {
-    margin-bottom: 61px;
-  }
-
-  &__title {
-    font-size: 48px;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin-bottom: 18px;
-  }
-
-  &__subttle {
-    font-size: 21px;
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 40px;
-  }
+  background: $blue url("../img/header_slider/surfman_1.jpg") top center / cover no-repeat;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

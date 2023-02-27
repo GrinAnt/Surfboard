@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -12,14 +21,14 @@ img {
 ul {
   margin: 0;
   padding: 0;
-}
 
-ul li {
-  list-style: none;
+  li {
+    list-style: none;
+  }
 }
 
 a {
-  color: #000;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -31,24 +40,44 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+  font-weight: normal;
 }
 
-*:before,
-*:after {
-  box-sizing: border-box;
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+section {
+  height: $height;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: $width_container + 20px;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .container {
-  max-width: 940px;
+  max-width: $width_container;
   margin: 0 auto;
-}
-
-.title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: $dark_grey;
+  padding: 0 20px;
 }
 
 .visually-hidden {
@@ -62,20 +91,6 @@ h6 {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-button {
-  cursor: pointer;
-  outline: none;
-  border: none;
-}
-
-.full-screen {
-  height: 100vh;
-}
-
-address {
-  font-style: normal;
 }
 
 // Убрает стрелки у полей с типом number
