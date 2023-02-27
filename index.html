@@ -17,7 +17,7 @@
   <body>
     <div class="wrapper">
       <section class="hero">
-        <div class="container">
+        <div class="container header__container">
           <header class="header">
             <div class="logo">
               <a class="logo__link" href="#">
@@ -62,14 +62,14 @@
               <p class="headline__subttle">Самый большой выбор серфбордов в мире</p>
               <a class="btn headline__btn" href="#">Заказать</a>
             </div>
+          </div>
 
-            <div class="dignity">
-              <ul class="dignity__list">
-                <li class="dignity__item dignity__item--desing">Уникальный дизайн</li>
-                <li class="dignity__item dignity__item--materials">Прочные материалы</li>
-                <li class="dignity__item dignity__item--delivery">Быстрая доставка</li>
-              </ul>
-            </div>
+          <div class="dignity">
+            <ul class="dignity__list">
+              <li class="dignity__item dignity__item--desing">Уникальный дизайн</li>
+              <li class="dignity__item dignity__item--materials">Прочные материалы</li>
+              <li class="dignity__item dignity__item--delivery">Быстрая доставка</li>
+            </ul>
           </div>
         </div>
       </section>
@@ -108,7 +108,7 @@
         </div>
 
         <section class="why">
-          <div class="container">
+          <div class="container center">
             <div class="features">
               <h2 class="features__title title">Почему Surfboard?</h2>
               <p class="features__text">
@@ -155,8 +155,9 @@
             </div>
           </div>
         </section>
+
         <section class="reviews">
-          <div class="container">
+          <div class="container center">
             <h2 class="reviews__title title">отзывы</h2>
 
             <article class="reviews-card">
@@ -216,7 +217,7 @@
         </section>
 
         <section class="order">
-          <div class="container">
+          <div class="container center">
             <h2 class="order__title title">Закажите доску</h2>
 
             <form class="order-form" action="" method="get">
@@ -244,7 +245,12 @@
 
                 <div class="order-form__street">
                   <label class="order-form__field-name" for="street">Улица</label>
-                  <input class="order-form__input order-form__input--large" type="text" id="street" required />
+                  <input
+                    class="order-form__input order-form__input--large"
+                    type="text"
+                    id="street"
+                    name="street"
+                    required />
                 </div>
 
                 <div class="order-form__row">
@@ -255,6 +261,7 @@
                       type="number"
                       id="house"
                       name="house"
+                      min="1"
                       required />
                   </div>
                   <div class="order-form__col">
@@ -263,7 +270,8 @@
                       class="order-form__input order-form__input--small"
                       type="number"
                       id="housing"
-                      name="housing" />
+                      name="housing"
+                      min="1" />
                   </div>
                   <div class="order-form__col">
                     <label class="order-form__field-name" for="apartment">Квартира</label>
@@ -271,11 +279,17 @@
                       class="order-form__input order-form__input--small"
                       type="number"
                       id="apartment"
-                      name="apartment" />
+                      name="apartment"
+                      min="1" />
                   </div>
                   <div class="order-form__col">
                     <label class="order-form__field-name" for="floor">Этаж</label>
-                    <input class="order-form__input order-form__input--small" type="number" id="floor" name="floor" />
+                    <input
+                      class="order-form__input order-form__input--small"
+                      type="number"
+                      id="floor"
+                      name="floor"
+                      min="1" />
                   </div>
                 </div>
               </div>
@@ -291,13 +305,19 @@
 
                 <div class="order-form__options">
                   <div class="order-form__payment">
-                    <input class="order-form__input-payment visually-hidden" type="radio" name="payment" id="cash" />
+                    <input
+                      class="order-form__input-payment visually-hidden"
+                      type="radio"
+                      name="payment"
+                      id="cash"
+                      value="cash" />
                     <label class="order-form__field-name" for="cash">Оплата наличными</label>
                     <input
                       class="order-form__input-payment visually-hidden"
                       type="radio"
                       name="payment"
                       id="card"
+                      value="card"
                       checked />
                     <label class="order-form__field-name" for="card">Оплата картой</label>
                   </div>
