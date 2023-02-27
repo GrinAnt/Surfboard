@@ -4,7 +4,7 @@
   flex-wrap: wrap;
 }
 
-.navigation__item {
+.navigation__item:not(:last-child) {
   padding-right: 22px;
 }
 

@@ -1,0 +1,20 @@
+.order-button {
+  &__form:not(:last-child) {
+    margin-right: 22px;
+  }
+
+  &__form--clear {
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 1.22;
+    font-weight: 400;
+    color: $white;
+    text-transform: none;
+    padding: 0;
+  }
+
+  &__form--clear:hover {
+    background-color: transparent;
+    color: $yellow;
+  }
+}

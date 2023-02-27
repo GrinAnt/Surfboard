@@ -199,7 +199,7 @@ body {
       flex-wrap: wrap;
 }
 
-.navigation__item {
+.navigation__item:not(:last-child) {
   padding-right: 22px;
 }
 
@@ -269,7 +269,6 @@ body {
   position: relative;
   width: 90px;
   padding-left: 52px;
-  margin-bottom: 25px;
 }
 .dignity__item:not(:nth-child(3n)) {
   margin-right: 82px;
@@ -351,9 +350,12 @@ body {
   right: -5px;
 }
 
+.why {
+  padding-top: 105px;
+}
+
 .features {
   text-align: center;
-  padding-top: 105px;
   margin-bottom: 50px;
 }
 .features__title {
@@ -473,7 +475,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.reviews-control__item {
+.reviews-control__item:not(:last-child) {
   margin-right: 6px;
 }
 .reviews-control__avatar {
@@ -577,12 +579,6 @@ body {
 .order-form__col:not(:last-child) {
   margin-right: 12px;
 }
-.order-form__text {
-  width: 450px;
-  height: 152px;
-  resize: none;
-  margin-bottom: 31px;
-}
 .order-form__input-payment + .order-form__field-name {
   display: inline-block;
   cursor: pointer;
@@ -634,10 +630,20 @@ body {
 .order-form__options {
   margin-bottom: 46px;
 }
-.order-form__btn:not(:last-child) {
+
+.order-comments {
+  margin-bottom: 31px;
+}
+.order-comments__text {
+  width: 450px;
+  height: 152px;
+  resize: none;
+}
+
+.order-button__form:not(:last-child) {
   margin-right: 22px;
 }
-.order-form__btn--clear {
+.order-button__form--clear {
   background-color: transparent;
   font-size: 18px;
   line-height: 1.22;
@@ -646,7 +652,7 @@ body {
   text-transform: none;
   padding: 0;
 }
-.order-form__btn--clear:hover {
+.order-button__form--clear:hover {
   background-color: transparent;
   color: #fedb3f;
 }
@@ -696,47 +702,47 @@ body {
   background: url("/img/icons/phone_black.png") center center no-repeat;
 }
 
-.footer-socials__list {
+.socials__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.footer-socials__item:not(:last-child) {
+.socials__item:not(:last-child) {
   margin-right: 14px;
 }
-.footer-socials__link {
+.socials__link {
   width: 20px;
   height: 20px;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-.footer-socials__link::before {
+.socials__link::before {
   content: "";
   width: 20px;
   height: 20px;
   display: inline-block;
 }
-.footer-socials__link--vk {
+.socials__link--vk {
   background: url("../img/icons/vk.svg") center center no-repeat;
 }
-.footer-socials__link--vk:hover {
+.socials__link--vk:hover {
   background: url("../img/icons/vk-hover.svg") center center no-repeat;
 }
-.footer-socials__link--fb {
+.socials__link--fb {
   background: url("../img/icons/fb.svg") center center no-repeat;
 }
-.footer-socials__link--fb:hover {
+.socials__link--fb:hover {
   background: url("../img/icons/fb-hover.svg") center center no-repeat;
 }
-.footer-socials__link--ins {
+.socials__link--ins {
   background: url("../img/icons/ins.svg") center center no-repeat;
 }
-.footer-socials__link--ins:hover {
+.socials__link--ins:hover {
   background: url("../img/icons/ins-hover.svg") center center no-repeat;
 }
-.footer-socials__link--tw {
+.socials__link--tw {
   background: url("../img/icons/tw.svg") center center no-repeat;
 }
-.footer-socials__link--tw:hover {
+.socials__link--tw:hover {
   background: url("../img/icons/tw-hover.svg") center center no-repeat;
 }

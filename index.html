@@ -295,13 +295,15 @@
               </div>
 
               <div class="comment__col">
-                <label class="order-form__field-name" for="comment">Комментарий</label>
-                <textarea
-                  class="order-form__input order-form__text"
-                  name="comment"
-                  id="comment"
-                  cols="67"
-                  rows="6"></textarea>
+                <div class="order-comments">
+                  <label class="order-form__field-name order-comments__name" for="comment">Комментарий</label>
+                  <textarea
+                    class="order-form__input order-comments__text"
+                    name="comment"
+                    id="comment"
+                    cols="67"
+                    rows="6"></textarea>
+                </div>
 
                 <div class="order-form__options">
                   <div class="order-form__payment">
@@ -331,8 +333,11 @@
                     <label class="order-form__field-name" for="call">Не перезванивать</label>
                   </div>
                 </div>
-                <button class="btn order-form__btn" type="submit">Заказать</button>
-                <button class="btn order-form__btn order-form__btn--clear" type="reset">Очистить</button>
+
+                <div class="order-button">
+                  <button class="btn order-button__form" type="submit">Заказать</button>
+                  <button class="btn order-button__form order-button__form--clear" type="reset">Очистить</button>
+                </div>
               </div>
             </form>
           </div>
@@ -351,25 +356,25 @@
               </address>
             </div>
             <div class="footer__col">
-              <div class="footer-socials">
-                <ul class="footer-socials__list">
-                  <li class="footer-socials__item">
-                    <a class="footer-socials__link footer-socials__link--vk" href="#">
+              <div class="socials">
+                <ul class="socials__list">
+                  <li class="socials__item">
+                    <a class="socials__link socials__link--vk" href="#">
                       <span class="visually-hidden">VK</span>
                     </a>
                   </li>
-                  <li class="footer-socials__item">
-                    <a class="footer-socials__link footer-socials__link--fb" href="#">
+                  <li class="socials__item">
+                    <a class="socials__link socials__link--fb" href="#">
                       <span class="visually-hidden">FB</span>
                     </a>
                   </li>
-                  <li class="footer-socials__item">
-                    <a class="footer-socials__link footer-socials__link--ins" href="#">
+                  <li class="socials__item">
+                    <a class="socials__link socials__link--ins" href="#">
                       <span class="visually-hidden">INS</span>
                     </a>
                   </li>
-                  <li class="footer-socials__item">
-                    <a class="footer-socials__link footer-socials__link--tw" href="#">
+                  <li class="socials__item">
+                    <a class="socials__link socials__link--tw" href="#">
                       <span class="visually-hidden">TW</span>
                     </a>
                   </li>

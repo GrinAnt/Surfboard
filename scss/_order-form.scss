@@ -65,13 +65,6 @@
     margin-right: 12px;
   }
 
-  &__text {
-    width: 450px;
-    height: 152px;
-    resize: none;
-    margin-bottom: 31px;
-  }
-
   &__input-payment + &__field-name {
     display: inline-block;
     cursor: pointer;
@@ -128,24 +121,5 @@
 
   &__options {
     margin-bottom: 46px;
-  }
-
-  &__btn:not(:last-child) {
-    margin-right: 22px;
-  }
-
-  &__btn--clear {
-    background-color: transparent;
-    font-size: 18px;
-    line-height: 1.22;
-    font-weight: 400;
-    color: $white;
-    text-transform: none;
-    padding: 0;
-  }
-
-  &__btn--clear:hover {
-    background-color: transparent;
-    color: $yellow;
   }
 }
