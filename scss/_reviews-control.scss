@@ -21,8 +21,8 @@
 @media (max-width: $phone) {
   .reviews-control {
     &__avatar {
-      width: 64px;
-      height: 64px;
+      width: rem(64px);
+      height: rem(64px);
     }
   }
 }

@@ -1,12 +1,13 @@
-// Fonts
+// FONTS
 $font: "Alegreya Sans", Arial, sans-serif;
+$OpenSans: "Open Sans", Arial, sans-serif;
 $font_size: 18px;
 
-// Размеры
+// SIZE
 $width_container: 940px;
 $height: 100vh;
 
-// Color
+// COLOR
 $white: #fff;
 $black: #000;
 $grey: #666;
@@ -19,14 +20,14 @@ $yellow: #fedb3f;
 $dark_yellow: #ffd517;
 $blue: #1968b1;
 
-// REM
+// REM FUNCTION
 $gfz: $font_size;
 
 @function rem($px) {
-  @return $px / $gfz + 0rem;
+  @return calc($px / $gfz) + 0rem;
 }
 
-// Screen size
+// SCREEN SIZE
 $tablets: 768px;
 $phone: 480px;
 $small_phone: 320px;

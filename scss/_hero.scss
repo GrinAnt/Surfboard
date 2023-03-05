@@ -5,6 +5,6 @@
 
 @media (max-width: $tablets) {
   .hero {
-    background-position: top 91px right -170px;
+    background-position: top rem(91px) right rem(-170px);
   }
 }

@@ -42,11 +42,10 @@
     margin-bottom: rem(32px);
 
     &__img {
-      width: 130px;
-      height: 130px;
+      width: rem(130px);
+      height: rem(130px);
       margin-right: 0;
-      // margin-bottom: rem(34px);
-      margin-bottom: 34px;
+      margin-bottom: rem(34px);
     }
 
     &__desc {
@@ -62,11 +61,11 @@
 @media (max-width: $phone) {
   .reviews-card {
     &__img {
-      margin-bottom: 27px;
+      margin-bottom: rem(27px);
     }
 
     &__text {
-      margin-bottom: 12px;
+      margin-bottom: rem(12px);
     }
   }
 }

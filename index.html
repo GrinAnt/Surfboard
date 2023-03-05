@@ -10,6 +10,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap"
       rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Surfboard</title>
@@ -227,92 +228,75 @@
         <section class="order">
           <div class="container center">
             <h2 class="order__title title">Закажите доску</h2>
-
-            <form class="order-form" action="" method="get">
+            <form class="order-form" action="#">
               <div class="order-form__col">
-                <div class="order-form__contacts">
-                  <div class="order-form__contacts-row">
-                    <label class="order-form__field-name" for="name">Имя</label>
-                    <input
-                      class="order-form__input order-form__input--medium"
-                      type="text"
-                      name="name"
-                      id="name"
-                      required />
-                  </div>
-                  <div class="order-form__contacts-row">
-                    <label class="order-form__field-name" for="phone">Телефон</label>
-                    <input
-                      class="order-form__input order-form__input--medium"
-                      type="tel"
-                      name="phone"
-                      id="phone"
-                      required />
-                  </div>
-                </div>
-
-                <div class="order-form__street">
-                  <label class="order-form__field-name" for="street">Улица</label>
-                  <input
-                    class="order-form__input order-form__input--large"
-                    type="text"
-                    id="street"
-                    name="street"
-                    required />
-                </div>
-
                 <div class="order-form__row">
-                  <div class="order-form__cols">
-                    <label class="order-form__field-name" for="house">Дом</label>
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="name">Имя</label>
+                    <input class="order-form__input" type="text" name="name" id="name" required />
+                  </div>
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="phone">Телефон</label>
+                    <input class="order-form__input" type="tel" name="tel" id="phone" required />
+                  </div>
+                </div>
+                <div class="order-form__row">
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="street">Улица</label>
+                    <input class="order-form__input" type="text" name="street" id="street" required />
+                  </div>
+                </div>
+                <div class="order-form__row">
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="house">Дом</label>
                     <input
-                      class="order-form__input order-form__input--small"
+                      class="order-form__input order-form__input--center"
                       type="number"
-                      id="house"
                       name="house"
                       min="1"
+                      id="house"
                       required />
                   </div>
-                  <div class="order-form__cols">
-                    <label class="order-form__field-name" for="housing">Корпус</label>
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="housing">Корпус</label>
                     <input
-                      class="order-form__input order-form__input--small"
+                      class="order-form__input order-form__input--center"
                       type="number"
-                      id="housing"
                       name="housing"
-                      min="1" />
+                      min="1"
+                      id="housing" />
                   </div>
-                  <div class="order-form__cols">
-                    <label class="order-form__field-name" for="apartment">Квартира</label>
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="apartment">Квартира</label>
                     <input
-                      class="order-form__input order-form__input--small"
+                      class="order-form__input order-form__input--center"
                       type="number"
-                      id="apartment"
                       name="apartment"
-                      min="1" />
+                      min="1"
+                      id="apartment" />
                   </div>
-                  <div class="order-form__cols">
-                    <label class="order-form__field-name" for="floor">Этаж</label>
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="floor">Этаж</label>
                     <input
-                      class="order-form__input order-form__input--small"
+                      class="order-form__input order-form__input--center"
                       type="number"
-                      id="floor"
                       name="floor"
-                      min="1" />
+                      min="1"
+                      id="floor" />
                   </div>
                 </div>
               </div>
 
-              <div class="comment__col">
-                <div class="order-comments">
-                  <label class="order-form__field-name order-comments__name" for="comment">Комментарий</label>
-                  <textarea
-                    class="order-form__input order-comments__text"
-                    name="comment"
-                    id="comment"
-                    cols="67"
-                    rows="6"></textarea>
+              <div class="order-form__col">
+                <div class="order-form__row order-form__row--textarea">
+                  <div class="order-form__block">
+                    <label class="order-form__title" for="comment">Комментарий</label>
+                    <textarea
+                      class="order-form__input order-form__input--textarea"
+                      name="comment"
+                      id="comment"></textarea>
+                  </div>
                 </div>
-
                 <div class="order-form__options">
                   <div class="order-form__payment">
                     <input
@@ -321,7 +305,7 @@
                       name="payment"
                       id="cash"
                       value="cash" />
-                    <label class="order-form__field-name" for="cash">Оплата наличными</label>
+                    <label class="order-form__title" for="cash">Оплата наличными</label>
                     <input
                       class="order-form__input-payment visually-hidden"
                       type="radio"
@@ -329,7 +313,7 @@
                       id="card"
                       value="card"
                       checked />
-                    <label class="order-form__field-name" for="card">Оплата картой</label>
+                    <label class="order-form__title" for="card">Оплата картой</label>
                   </div>
                   <div class="order-form__call">
                     <input
@@ -338,10 +322,9 @@
                       name="call"
                       id="call"
                       checked />
-                    <label class="order-form__field-name" for="call">Не перезванивать</label>
+                    <label class="order-form__title" for="call">Не перезванивать</label>
                   </div>
                 </div>
-
                 <div class="order-button">
                   <button class="btn order-button__form" type="submit">Заказать</button>
                   <button class="btn order-button__form order-button__form--clear" type="reset">Очистить</button>

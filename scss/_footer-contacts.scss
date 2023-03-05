@@ -3,7 +3,7 @@
     font-size: rem(21px);
     line-height: 1.14;
     font-weight: 400;
-    margin-bottom: 2px;
+    margin-bottom: rem(2px);
   }
 
   &__number {
@@ -22,23 +22,16 @@
   }
 }
 
-// @media (max-width: $tablets) {
-//   .footer-contacts {
-//     &__address {
-//       flex: 1 0 auto;
-//     }
-// }
-
 @media (max-width: $phone) {
   .footer-contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
-    margin-bottom: 19px;
+    margin-bottom: rem(19px);
 
     &__address {
-      margin-bottom: 12px;
+      margin-bottom: (12px);
+      text-align: center;
     }
   }
 }

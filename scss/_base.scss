@@ -8,6 +8,12 @@ html {
   font-size: $font_size;
 }
 
+@media (max-width: 320px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 *:before,
 *:after {
   box-sizing: border-box;

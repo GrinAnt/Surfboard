@@ -1,7 +1,6 @@
 .features {
   text-align: center;
   margin-bottom: rem(50px);
-  // margin-bottom: 50px;
 
   &__title {
     margin-bottom: rem(17px);
@@ -18,10 +17,10 @@
 
 @media (max-width: $phone) {
   .features {
-    margin-bottom: 53px;
+    margin-bottom: rem(53px);
 
     &__title {
-      margin-bottom: 9px;
+      margin-bottom: rem(9px);
     }
   }
 }

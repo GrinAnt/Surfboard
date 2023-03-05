@@ -27,7 +27,7 @@
 @media (max-width: $tablets) {
   .order {
     &__title {
-      margin-bottom: 32px;
+      margin-bottom: rem(32px);
     }
   }
 }
