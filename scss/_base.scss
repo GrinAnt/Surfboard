@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: $font_size;
+}
+
 *:before,
 *:after {
   box-sizing: border-box;
@@ -62,22 +66,21 @@ table {
   border-collapse: collapse;
 }
 
+label {
+  cursor: pointer;
+  user-select: none;
+}
+
 section {
   height: $height;
-  min-height: 625px;
+  min-height: rem(652px);
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: $width_container + 20px;
   min-height: 100%;
   overflow: hidden;
-}
-
-.container {
-  max-width: $width_container;
-  margin: 0 auto;
 }
 
 .visually-hidden {

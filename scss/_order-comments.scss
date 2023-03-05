@@ -2,8 +2,19 @@
   margin-bottom: 31px;
 
   &__text {
-    width: 450px;
-    height: 152px;
+    width: rem(450px);
+    height: rem(152px);
     resize: none;
+  }
+}
+
+@media (max-width: $tablets) {
+  .order-comments {
+    &__text {
+      // width: rem(450px);
+      // height: rem(152px);
+      width: 466px;
+      height: 82px;
+    }
   }
 }

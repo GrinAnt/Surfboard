@@ -5,7 +5,7 @@
   }
 
   &__item:not(:last-child) {
-    margin-right: 6px;
+    margin-right: rem(6px);
   }
 
   &__avatar {
@@ -16,4 +16,13 @@
 .reviews-control__item--active .reviews-control__avatar {
   outline: 6px solid $yellow;
   outline-offset: -6px;
+}
+
+@media (max-width: $phone) {
+  .reviews-control {
+    &__avatar {
+      width: 64px;
+      height: 64px;
+    }
+  }
 }

@@ -1,11 +1,12 @@
 .navigation__list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  margin-right: rem(47px);
   flex-wrap: wrap;
 }
 
 .navigation__item:not(:last-child) {
-  padding-right: 22px;
+  padding-right: rem(22px);
 }
 
 .navigation__link {
@@ -14,5 +15,11 @@
 
   &:hover {
     color: $yellow;
+  }
+}
+
+@media (max-width: $tablets) {
+  .navigation {
+    display: none;
   }
 }

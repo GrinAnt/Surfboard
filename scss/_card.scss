@@ -3,50 +3,116 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    flex-wrap: wrap;
   }
 
   &__item {
-    max-width: 279px;
+    max-width: rem(279px);
     position: relative;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
 
     &:not(:nth-child(3n))::after {
       content: "";
-      width: 67px;
-      height: 21px;
+      width: rem(67px);
+      height: rem(21px);
       background: url("../img/icons/shape.png") center center no-repeat;
       position: absolute;
-      top: 57px;
-      right: -61px;
+      top: rem(57px);
+      right: rem(-61px);
     }
   }
 
   &__icon {
-    margin-bottom: 21px;
+    margin-bottom: rem(21px);
     display: flex;
     justify-content: center;
   }
 
   &__img {
     background-color: $light_grey;
-    padding: 28px;
+    padding: rem(28px);
     text-align: center;
     border-radius: 50%;
     overflow: visible;
+    width: rem(126px);
+    height: rem(126px);
   }
 
   &__title {
-    font-size: 27px;
+    font-size: rem(27px);
     line-height: 1.18;
     color: $dark_grey;
     font-weight: 700;
-    margin-bottom: 22px;
+    margin-bottom: rem(22px);
   }
 
   &__text {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 300;
     line-height: 1.22;
     color: $grey;
+  }
+}
+
+@media (max-width: 950px) {
+  .card {
+    &__item::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $tablets) {
+  .card {
+    &__item {
+      max-width: rem(245px);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &__icon {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .card {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+      align-items: center;
+      margin-bottom: 31px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &__icon {
+      margin-right: 12px;
+      margin-bottom: 0;
+    }
+
+    &__desc {
+      text-align: left;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
   }
 }

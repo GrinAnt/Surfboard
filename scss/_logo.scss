@@ -1,0 +1,11 @@
+.logo {
+  //   flex: 0 0 auto;
+  margin-right: rem(46px);
+
+  &__img {
+    display: inline-block;
+    width: rem(56px);
+    height: rem(39px);
+    fill: $white;
+  }
+}

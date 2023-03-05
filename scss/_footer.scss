@@ -1,35 +1,36 @@
 .footer {
-  padding-top: 17px;
+  padding-top: rem(17px);
   color: $dark_grey;
 
   &__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 18px;
+    align-content: center;
+    margin-bottom: rem(18px);
   }
+}
 
-  &__address {
-    font-size: 21px;
-    line-height: 1.14;
-    font-weight: 400;
-  }
-
-  &__phone {
-    color: $dark_grey;
-    font-size: 21px;
-    font-weight: 400;
-    position: relative;
-    padding-left: 19px;
-  }
-
-  &__phone::before {
-    content: "";
-    width: 12px;
-    height: 12px;
+@media (max-width: $tablets) {
+  .footer {
+    background-color: $white;
     position: absolute;
-    top: 5px;
+    bottom: 0;
     left: 0;
-    background: url("/img/icons/phone_black.png") center center no-repeat;
+    right: 0;
+
+    &__col {
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: $phone) {
+  .footer {
+    &__box {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

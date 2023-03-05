@@ -12,8 +12,21 @@ $black: #000;
 $grey: #666;
 $grayish: #f8faf9;
 $light_grey: #f2f5f4;
+$social_grey: #b3b3b3;
 $darkness: #2b2b2b;
 $dark_grey: #292929;
 $yellow: #fedb3f;
 $dark_yellow: #ffd517;
 $blue: #1968b1;
+
+// REM
+$gfz: $font_size;
+
+@function rem($px) {
+  @return $px / $gfz + 0rem;
+}
+
+// Screen size
+$tablets: 768px;
+$phone: 480px;
+$small_phone: 320px;

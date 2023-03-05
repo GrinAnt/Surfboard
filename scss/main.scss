@@ -1,6 +1,8 @@
 @import "_variables";
 @import "_base";
 @import "_fonts";
+@import "_main";
+@import "_container";
 @import "_title";
 @import "_btn";
 @import "_center";
@@ -9,6 +11,7 @@
 @import "_logo";
 @import "_navigation";
 @import "_contacts";
+@import "_hamburger";
 @import "_headline";
 @import "_dignity";
 @import "_pagination";
@@ -24,4 +27,8 @@
 @import "_order-button";
 @import "_map";
 @import "_footer";
+@import "_footer-contacts";
 @import "_socials";
+
+// Эксперементы - НЕ ЗАБЫТЬ УДАЛИТЬ ИЗ ФИНАЛЬНОЙ ЧАСТИ!!!!
+@import "_experiments";

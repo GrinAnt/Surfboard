@@ -1,41 +1,40 @@
 .dignity {
   &__list {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    width: 52%;
     color: $white;
   }
 
   &__item {
-    font-size: 16px;
-    line-height: 1.1;
-    position: relative;
-    width: 90px;
-    padding-left: 52px;
+    display: flex;
 
-    &:not(:nth-child(3n)) {
-      margin-right: 82px;
+    &:not(:last-child) {
+      margin-right: 15px;
     }
+  }
 
-    &::before {
-      content: "";
-      width: 41px;
-      height: 41px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: inline-block;
-    }
-    @each $dignity in (desing, materials, delivery) {
-      &--#{$dignity}::before {
-        content: "";
-        width: 41px;
-        height: 41px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: url("../img/icons/#{$dignity}.png") center center no-repeat;
-      }
-    }
+  &__icon {
+    margin-right: rem(11px);
+  }
+
+  &__img {
+    display: inline-block;
+    width: rem(41px);
+    height: rem(41px);
+    fill: $white;
+  }
+
+  &__text {
+    font-size: rem(16px);
+    line-height: 1.12;
+    font-weight: 700;
+    max-width: rem(90px);
+  }
+}
+
+@media (max-width: $tablets) {
+  .dignity {
+    display: none;
   }
 }

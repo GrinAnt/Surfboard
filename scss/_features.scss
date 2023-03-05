@@ -1,9 +1,10 @@
 .features {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: rem(50px);
+  // margin-bottom: 50px;
 
   &__title {
-    margin-bottom: 17px;
+    margin-bottom: rem(17px);
   }
 
   &__text {
@@ -11,6 +12,16 @@
     line-height: 1.22;
     color: $grey;
     margin: 0 auto;
-    max-width: 436px;
+    max-width: rem(436px);
+  }
+}
+
+@media (max-width: $phone) {
+  .features {
+    margin-bottom: 53px;
+
+    &__title {
+      margin-bottom: 9px;
+    }
   }
 }

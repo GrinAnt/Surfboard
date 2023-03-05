@@ -1,0 +1,15 @@
+.container {
+  max-width: $width_container + 20px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+@media (max-width: $tablets) {
+  .container {
+    padding: 0 22px;
+
+    &__why {
+      padding: 0 5px;
+    }
+  }
+}

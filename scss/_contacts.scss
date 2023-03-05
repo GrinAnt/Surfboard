@@ -1,18 +1,28 @@
-.contacts__phone {
-  font-size: 22px;
-  font-style: normal;
-  color: $white;
-  position: relative;
+.contacts {
+  flex: 1 0 auto;
 
-  &:before {
-    content: "";
-    width: 13px;
-    height: 14px;
-    background-image: url("../img/icons/phone.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: -18px;
-    top: 5px;
+  &__phone {
+    font-size: rem(22px);
+    font-style: normal;
+    color: $white;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: rem(5px);
+  }
+
+  &__img {
+    display: inline-block;
+    width: rem(13px);
+    height: rem(14px);
+    fill: $white;
+  }
+}
+
+@media (max-width: $tablets) {
+  .contacts {
+    display: none;
   }
 }
