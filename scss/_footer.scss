@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    margin-bottom: rem(18px);
+    padding-bottom: rem(18px);
   }
 }
 
@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
 
-    &__col {
+    &__col:not(:last-child) {
       margin-right: rem(15px);
     }
   }
@@ -31,6 +31,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    & &__col {
+      margin-right: 0;
     }
   }
 }

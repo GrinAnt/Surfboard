@@ -6,11 +6,12 @@
 
 @media (max-width: $tablets) {
   .hamburger {
+    position: fixed;
+    top: rem(34px);
+    right: rem(36px);
     width: rem(26px);
     height: rem(24px);
     cursor: pointer;
-    margin-right: rem(6px);
-    margin-bottom: rem(5px);
 
     &__menu {
       display: block;
@@ -41,5 +42,13 @@
         right: 0;
       }
     }
+  }
+}
+
+@media (max-width: $phone) {
+  .hamburger {
+    position: fixed;
+    top: rem(32px);
+    right: rem(10px);
   }
 }

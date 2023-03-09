@@ -97,9 +97,13 @@
       align-items: center;
       margin-bottom: rem(31px);
 
-      &:not(:last-child) {
-        margin-right: 0;
+      &:last-child {
+        margin-bottom: 0;
       }
+    }
+
+    &__list &__item {
+      margin-right: 0;
     }
 
     &__icon {
@@ -113,6 +117,10 @@
 
     &__title {
       margin-bottom: rem(10px);
+    }
+
+    &__text {
+      max-width: rem(290px);
     }
   }
 }
