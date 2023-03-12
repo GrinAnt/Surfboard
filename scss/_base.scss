@@ -8,7 +8,7 @@ html {
   font-size: $font_size;
 }
 
-@media (max-width: 320px) {
+@media (max-width: $small_phone) {
   html {
     font-size: 14px;
   }
