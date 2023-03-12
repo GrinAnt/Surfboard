@@ -1,0 +1,110 @@
+.benefits {
+  display: flex;
+  position: relative;
+  margin-bottom: 52px;
+
+  & {
+    @include tablets {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tip {
+    position: relative;
+    width: 91px;
+    height: 91px;
+    border-radius: 4px;
+    background-color: $moderate_blue;
+    cursor: pointer;
+
+    & {
+      @include tablets {
+        display: none;
+      }
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 38px;
+    height: 38px;
+    fill: $white;
+    user-select: none;
+  }
+
+  &__title {
+    position: absolute;
+    left: 7px;
+    bottom: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.21;
+    font-weight: 700;
+    color: $white;
+    user-select: none;
+  }
+
+  &__list {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -9999px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(20px);
+    width: 273px;
+    padding: 18px 14px 21px;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 91px;
+      height: 175px;
+      position: absolute;
+      top: 91px;
+      left: -91px;
+    }
+  }
+
+  &__tip:hover ~ &__list {
+    opacity: 1;
+    right: 0;
+    left: 91px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__icon {
+    margin-right: 12px;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__pic {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    fill: $black;
+    user-select: none;
+  }
+}

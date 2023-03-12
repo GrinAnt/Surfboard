@@ -28,6 +28,10 @@
 @import "_why";
 @import "_features";
 @import "_card";
+// BLOCK SLIDER
+@import "_slider";
+@import "_benefits";
+@import "_description";
 //BLOCK REVIEWS
 @import "_reviews";
 @import "_reviews-card";
@@ -47,52 +51,3 @@
 // CONTROLS
 @import "_hamburger";
 @import "_pagination";
-
-//Эксперементы - НЕ ЗАБЫТЬ УДАЛИТЬ ИЗ ФИНАЛЬНОЙ ЧАСТИ!!!!
-@import "_experiments";
-
-.navigation {
-  @include tablets {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #313131;
-    z-index: 100;
-  }
-}
-
-.navigation__list {
-  @include tablets {
-    min-width: 100%;
-    min-height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-
-.navigation__link {
-  @include tablets {
-    font-size: rem(36px);
-    line-height: 2;
-    font-weight: 400;
-  }
-}
-
-.navigation--active {
-  display: block;
-}
-
-.hamburger--active .hamburger__menu {
-  transform: rotate(45deg) translateY(5px);
-
-  &::before {
-    display: none;
-  }
-
-  &::after {
-    transform: rotate(-90deg) translateX(8px);
-  }
-}

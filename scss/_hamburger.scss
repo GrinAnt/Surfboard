@@ -6,7 +6,6 @@
 
 @media (max-width: $tablets) {
   .hamburger {
-    // display: block;
     position: fixed;
     top: rem(34px);
     right: rem(36px);
@@ -35,7 +34,7 @@
       }
 
       &::before {
-        top: rem(-9px);
+        top: rem(18px);
       }
 
       &::after {
@@ -50,5 +49,17 @@
     position: fixed;
     top: rem(32px);
     right: rem(10px);
+  }
+}
+
+.hamburger--active .hamburger__menu {
+  transform: rotate(45deg) translateY(5px);
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    transform: rotate(-90deg) translateX(8px);
   }
 }
