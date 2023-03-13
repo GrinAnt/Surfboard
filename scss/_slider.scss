@@ -3,9 +3,29 @@
 
   & {
     @include tablets {
-      padding-top: 27px;
+      padding-top: rem(27px);
     }
   }
+
+  // &__list {
+  //   display: flex;
+  //   // flex-wrap: wrap;
+  //   // justify-content: flex-start;
+  //   // width: 100%;
+  //   // float: left;
+  //   position: relative;
+  //   overflow: hidden;
+  // }
+
+  // &__item {
+  //   position: relative;
+  //   // display: block;
+  //   // display: flex;
+  //   // float: left;
+  //   width: 940px;
+  //   height: 642px;
+  //   flex: 0 0 940px;
+  // }
 
   &__box {
     display: flex;
@@ -31,13 +51,13 @@
   }
 
   &__pic {
-    padding-left: 65px;
+    padding-left: rem(65px);
 
     & {
       @include tablets {
         padding-left: 0;
-        width: 318px;
-        height: 417px;
+        width: rem(318px);
+        height: rem(417px);
       }
     }
 
@@ -51,11 +71,11 @@
   }
 
   &__desc {
-    padding: 0 29px 0 69px;
+    padding: 0 rem(29px) 0 rem(69px);
 
     & {
       @include tablets {
-        padding: 0 30px;
+        padding: 0 rem(30px);
       }
     }
   }
@@ -67,15 +87,15 @@
   }
 
   &__title {
-    font-size: 36px;
+    font-size: rem(36px);
     font-weight: 700;
     line-height: 1.19;
     text-transform: uppercase;
-    margin-bottom: 26px;
+    margin-bottom: rem(26px);
 
     & {
       @include tablets {
-        font-size: 30px;
+        font-size: rem(30px);
       }
     }
   }
@@ -84,16 +104,16 @@
     font-weight: 400;
     line-height: 1.22;
     color: $grey;
-    margin-bottom: 24px;
+    margin-bottom: rem(24px);
 
     & {
       @include tablets {
-        padding: 0 45px;
+        padding: 0 rem(45px);
       }
 
       @include phones {
         padding: 0;
-        max-width: 380px;
+        max-width: rem(380px);
       }
     }
   }
@@ -105,13 +125,13 @@
     & {
       @include tablets {
         justify-content: center;
-        padding-bottom: 20px;
+        padding-bottom: rem(20px);
       }
     }
   }
 
   &__price {
-    font-size: 60px;
+    font-size: rem(60px);
     font-weight: 300;
     line-height: 1;
     color: #151515;
@@ -124,7 +144,7 @@
 
     & {
       @include phones {
-        margin-right: 10px;
+        margin-right: rem(10px);
       }
     }
   }
@@ -133,8 +153,8 @@
     position: absolute;
     top: 48%;
     font-size: 0;
-    width: 22px;
-    height: 22px;
+    width: rem(22px);
+    height: rem(22px);
     border-top: 3px solid $black;
     border-right: 3px solid $black;
     border-top-right-radius: 3px;

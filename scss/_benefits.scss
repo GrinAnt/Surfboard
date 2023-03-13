@@ -1,7 +1,7 @@
 .benefits {
   display: flex;
   position: relative;
-  margin-bottom: 52px;
+  margin-bottom: rem(52px);
 
   & {
     @include tablets {
@@ -11,8 +11,8 @@
 
   &__tip {
     position: relative;
-    width: 91px;
-    height: 91px;
+    width: rem(91px);
+    height: rem(91px);
     border-radius: 4px;
     background-color: $moderate_blue;
     cursor: pointer;
@@ -29,18 +29,18 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -70%);
-    width: 38px;
-    height: 38px;
+    width: rem(38px);
+    height: rem(38px);
     fill: $white;
     user-select: none;
   }
 
   &__title {
     position: absolute;
-    left: 7px;
-    bottom: 10px;
+    left: rem(7px);
+    bottom: rem(10px);
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: rem(14px);
     line-height: 1.21;
     font-weight: 700;
     color: $white;
@@ -48,7 +48,6 @@
   }
 
   &__list {
-    display: block;
     position: absolute;
     top: 0;
     right: -9999px;
@@ -56,44 +55,50 @@
     border-radius: 4px;
     box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
     backdrop-filter: blur(20px);
-    width: 273px;
-    padding: 18px 14px 21px;
+    width: rem(273px);
+    padding: rem(18px) rem(14px) rem(21px);
     opacity: 0;
     transition: opacity 0.3s linear;
-    cursor: pointer;
+    user-select: none;
 
     &::before {
       content: "";
       display: block;
-      width: 91px;
-      height: 175px;
+      width: rem(20px);
+      height: rem(150px);
       position: absolute;
-      top: 91px;
-      left: -91px;
+      top: rem(91px);
+      left: rem(-20px);
     }
   }
 
   &__tip:hover ~ &__list {
     opacity: 1;
     right: 0;
-    left: 91px;
+    left: rem(91px);
+  }
+
+  &__list:hover {
+    opacity: 1;
+    right: 0;
+    left: rem(91px);
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: rem(8px);
   }
 
   &__row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 400;
     line-height: 1.5;
   }
 
   &__icon {
-    margin-right: 12px;
+    margin-right: rem(12px);
   }
 
   &__text {
@@ -102,8 +107,8 @@
 
   &__pic {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: rem(32px);
+    height: rem(32px);
     fill: $black;
     user-select: none;
   }

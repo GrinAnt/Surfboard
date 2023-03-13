@@ -1,7 +1,7 @@
 .description {
   &__list {
     display: flex;
-    margin-bottom: 19px;
+    margin-bottom: rem(19px);
 
     & {
       @include tablets {
@@ -12,7 +12,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 44px;
+      margin-right: rem(44px);
     }
   }
 
