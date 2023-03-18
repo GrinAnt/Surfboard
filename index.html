@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap"
       rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Surfboard</title>
@@ -163,8 +164,7 @@
 
         <section class="slider">
           <div class="container center">
-                        
-            <ul class="slider__list">
+            <ul class="slider__list fade single-item">
               <li class="slider__item">
                 <div class="slider__box">
                   <div class="slider__col">
@@ -174,7 +174,6 @@
                   </div>
                   <div class="slider__col">
                     <div class="slider__desc">
-                      
                       <div class="slider__benefits benefits">
                         <div class="benefits__tip">
                           <svg class="benefits__icons">
@@ -240,7 +239,7 @@
                           </li>
                         </ul>
                       </div>
-                      
+
                       <div class="slider__content">
                         <h2 class="slider__title">Лонгборд 2.0</h2>
                         <p class="slider__text">
@@ -259,8 +258,8 @@
                             <li class="description__item">
                               <div class="description__inner">
                                 <span class="description__text">Ширина доски</span>
-                                <span class="description__text--bold"> от 40 сантиметров
-                              </div> 
+                                <span class="description__text--bold"> от 40 сантиметров</span>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -275,7 +274,7 @@
                   </div>
                 </div>
               </li>
-              <!-- <li class="slider__item"> 
+              <li class="slider__item">
                 <div class="slider__box">
                   <div class="slider__col">
                     <div class="slider__img">
@@ -284,7 +283,6 @@
                   </div>
                   <div class="slider__col">
                     <div class="slider__desc">
-                      
                       <div class="slider__benefits benefits">
                         <div class="benefits__tip">
                           <svg class="benefits__icons">
@@ -350,11 +348,13 @@
                           </li>
                         </ul>
                       </div>
-                      
+
                       <div class="slider__content">
                         <h2 class="slider__title">Шортборд</h2>
                         <p class="slider__text">
-                          Самые быстрые доски для профессионалов. Размеры шортбордов позволяют быстро набирать скорость, делать различные трюки на волне, включая резкие повороты и развороты, флоатеры (проезды по самому гребню волны), различные прыжки с вращениями или без, а также катание в трубах.
+                          Самые быстрые доски для профессионалов. Размеры шортбордов позволяют быстро набирать скорость,
+                          делать различные трюки на волне, включая резкие повороты и развороты, флоатеры (проезды по
+                          самому гребню волны), различные прыжки с вращениями или без, а также катание в трубах.
                         </p>
                         <div class="slider__features description">
                           <ul class="description__list">
@@ -367,8 +367,8 @@
                             <li class="description__item">
                               <div class="description__inner">
                                 <span class="description__text">Ширина доски</span>
-                                <span class="description__text--bold"> от 30 сантиметров
-                              </div> 
+                                <span class="description__text--bold"> от 30 сантиметров</span>
+                              </div>
                             </li>
                           </ul>
                         </div>
@@ -382,10 +382,10 @@
                     </div>
                   </div>
                 </div>
-                </li> -->
+              </li>
             </ul>
-            <button class="slider__arrow slider__arrow--left" id="left">Назад</button>
-            <button class="slider__arrow slider__arrow--right">Вперед</button>
+            <!-- <button class="slider__arrow slider__arrow--left " id="left">Назад</button> -->
+            <!-- <button class="slider__arrow slider__arrow--right">Вперед</button> -->
           </div>
         </section>
 
@@ -658,6 +658,8 @@
       </ul>
     </div>
     <!-- Подключение JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

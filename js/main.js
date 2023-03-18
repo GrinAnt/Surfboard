@@ -19,26 +19,12 @@ link.forEach(function (e) {
   });
 });
 
-//
-//
-//
-//
-//
-// let arrow = document.querySelectorAll(".slider__arrow");
-// let slide = document.querySelector(".slider__list");
-// let firstImg = slide.querySelectorAll(".slider__item")[0];
-// let firstImgWidth = firstImg.clientWidth + 0;
-
-// arrow.forEach(function (icon) {
-//   icon.addEventListener("click", function () {
-//     if (icon.id == "left") {
-//       slide.scrollLeft -= firstImgWidth;
-//     } else {
-//       slide.scrollLeft += firstImgWidth;
-//     }
-//   });
-// });
-//
-//
-//
-//
+// слайдер на slick
+$(".single-item").slick({
+  infinite: true,
+  speed: 600,
+  cssEase: "linear",
+  swipe: true,
+  prevArrow: '<button type="button" class="slider__arrow slider__arrow--left"></button>',
+  nextArrow: '<button type="button" class="slider__arrow slider__arrow--right"></button>',
+});

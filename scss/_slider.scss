@@ -7,26 +7,6 @@
     }
   }
 
-  // &__list {
-  //   display: flex;
-  //   // flex-wrap: wrap;
-  //   // justify-content: flex-start;
-  //   // width: 100%;
-  //   // float: left;
-  //   position: relative;
-  //   overflow: hidden;
-  // }
-
-  // &__item {
-  //   position: relative;
-  //   // display: block;
-  //   // display: flex;
-  //   // float: left;
-  //   width: 940px;
-  //   height: 642px;
-  //   flex: 0 0 940px;
-  // }
-
   &__box {
     display: flex;
     justify-content: space-between;
@@ -159,6 +139,7 @@
     border-right: 3px solid $black;
     border-top-right-radius: 3px;
     background-color: transparent;
+    z-index: 200;
 
     & {
       @include tablets {
