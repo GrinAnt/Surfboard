@@ -1,0 +1,30 @@
+.team-mobile {
+  &__list {
+    display: none;
+
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list .team__item {
+    margin-right: 0;
+  }
+
+  &__list .team__content {
+    @include phones {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__list .team__pic {
+    @include phones {
+      width: rem(138px);
+      height: rem(180px);
+    }
+  }
+}

@@ -4,10 +4,13 @@
   line-height: 1.2;
   text-transform: uppercase;
   color: $dark_grey;
+  margin-bottom: rem(32px);
+  text-align: center;
 }
 
 @media (max-width: $phone) {
   .title {
     font-size: rem(40px);
+    margin-bottom: rem(26px);
   }
 }
