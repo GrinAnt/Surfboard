@@ -1,9 +1,21 @@
 .reviews-card {
-  display: flex;
-  align-items: center;
-  background-color: $grayish;
-  padding: rem(42px);
+  max-width: 100%;
   margin-bottom: rem(15px);
+  overflow: hidden;
+
+  &__list {
+    display: flex;
+    width: 100%;
+    transition: all 0.7ms;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    background-color: $grayish;
+    padding: rem(42px);
+    flex: 1 0 100%;
+  }
 
   &__img {
     margin-right: rem(40px);
@@ -36,10 +48,12 @@
 
 @media (max-width: $tablets) {
   .reviews-card {
-    flex-direction: column;
-    align-items: center;
-    padding: rem(56px) rem(24px) rem(22px);
-    margin-bottom: rem(32px);
+    &__item {
+      flex-direction: column;
+      align-items: center;
+      padding: rem(56px) rem(24px) rem(22px);
+      margin-bottom: rem(32px);
+    }
 
     &__img {
       width: rem(130px);

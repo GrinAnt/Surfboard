@@ -980,6 +980,19 @@ body {
   }
 }
 .reviews-card {
+  max-width: 100%;
+  margin-bottom: 0.8333333333rem;
+  overflow: hidden;
+}
+.reviews-card__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-transition: all 0.7ms;
+  transition: all 0.7ms;
+}
+.reviews-card__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -988,7 +1001,9 @@ body {
           align-items: center;
   background-color: #f8faf9;
   padding: 2.3333333333rem;
-  margin-bottom: 0.8333333333rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
 }
 .reviews-card__img {
   margin-right: 2.2222222222rem;
@@ -1016,7 +1031,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .reviews-card {
+  .reviews-card__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
