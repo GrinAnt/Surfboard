@@ -44,6 +44,7 @@
 @import "_order";
 @import "_order-form";
 @import "_order-button";
+@import "_modal";
 //BLOCK MAP
 @import "_map";
 //
@@ -55,3 +56,6 @@
 // CONTROLS
 @import "_hamburger";
 @import "_pagination";
+
+//Эксперементы - НЕ ЗАБЫТЬ УДАЛИТЬ ИЗ ФИНАЛЬНОЙ ЧАСТИ!!!!
+@import "_experiments";

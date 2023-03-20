@@ -158,12 +158,15 @@ accordionTeamMobile();
 // переменные формы
 const myForm = document.querySelector(".order-form");
 const btnForm = document.querySelector(".order-button__form");
+const modal = document.querySelector(".modal");
+const modalMessage = document.querySelector(".modal__text");
+const btnModalClose = document.querySelector(".modal__btn");
 
 btnForm.addEventListener("click", function (e) {
   e.preventDefault();
 
   if (validateForm(myForm)) {
-    const date = {
+    const data = {
       name: myForm.elements.name.value,
       phone: myForm.elements.phone.value,
       comment: myForm.elements.comment.value,
@@ -174,13 +177,30 @@ btnForm.addEventListener("click", function (e) {
     xhr.responseType = "json";
     xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
     xhr.setRequestHeader("content-type", "application/json");
-    xhr.send(JSON.stringify(date));
-
+    xhr.send(JSON.stringify(data));
     xhr.addEventListener("load", function () {
-      if (xhr.response.status) {
-        console.log("ОТПРАВЛЕНО");
+      if (xhr.response.status === 1) {
+        modal.style.opacity = "1";
+        modal.style.zIndex = "9999";
+        modalMessage.textContent = xhr.response.message;
       }
-      console.log("НЕ ОТПРАВЛЕНО");
+      // // if (xhr.response.status !== 1) {
+      // modalMessage.textContent = "Отправить сообщение не удалось, повторите запрос позже";
+      // // console.log(xhr);
+      // // }
+      // console.log(xhr);
+    });
+
+    btnModalClose.addEventListener("click", function () {
+      modal.style.opacity = "0";
+      modal.style.zIndex = "-9000";
+    });
+
+    window.addEventListener("keydown", function (e) {
+      if (e.code == "Escape") {
+        modal.style.opacity = "0";
+        modal.style.zIndex = "-9000";
+      }
     });
   }
 });
@@ -210,3 +230,7 @@ function validateField(field) {
     return true;
   }
 }
+
+// МОДАЛЬНОЕ ОКНО ФОРМЫ
+// const modal = document.querySelector(".modal");
+// const modalMessage = document.querySelector('.modal__text');

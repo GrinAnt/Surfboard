@@ -3,6 +3,10 @@
   padding: 0 rem(10px);
   margin: 0 auto;
   position: relative;
+
+  &__order {
+    position: initial;
+  }
 }
 
 @media (max-width: $tablets) {
