@@ -47,7 +47,7 @@
                   <a class="navigation__link" href="#">Отзывы</a>
                 </li>
                 <li class="navigation__item">
-                  <a class="navigation__link" href="#">Как мы работаем</a>
+                  <a class="navigation__link" href="#order">Как мы работаем</a>
                 </li>
                 <li class="navigation__item">
                   <a class="navigation__link" href="#">Контакты</a>
@@ -389,7 +389,6 @@
           </div>
         </section>
 
-        <!-- TEAM BLOCK START -->
         <section class="team" id="team">
           <div class="container center">
             <h2 class="team__title title">Команда</h2>
@@ -500,7 +499,6 @@
             <!-- MOBILE END -->
           </div>
         </section>
-        <!-- TEAM BLOCK END -->
 
         <section class="reviews">
           <div class="container center">
@@ -607,11 +605,12 @@
           </div>
         </section>
 
-        <section class="order">
+        <section class="order" id="order">
           <div class="container center">
             <h2 class="order__title title">Закажите доску</h2>
 
-            <form class="order-form" action="#">
+            <form class="order-form">
+              <input type="hidden" name="to" value="myMail@mail.com" />
               <div class="order-form__col">
                 <div class="order-form__row">
                   <div class="order-form__block">
@@ -626,7 +625,7 @@
                 <div class="order-form__row">
                   <div class="order-form__block">
                     <label class="order-form__title" for="street">Улица</label>
-                    <input class="order-form__input" type="text" name="street" id="street" required />
+                    <input class="order-form__input" type="text" name="street" id="street" />
                   </div>
                 </div>
                 <div class="order-form__row">
@@ -637,8 +636,7 @@
                       type="number"
                       name="house"
                       min="1"
-                      id="house"
-                      required />
+                      id="house" />
                   </div>
                   <div class="order-form__block">
                     <label class="order-form__title" for="housing">Корпус</label>
@@ -677,7 +675,8 @@
                     <textarea
                       class="order-form__input order-form__input--textarea"
                       name="comment"
-                      id="comment"></textarea>
+                      id="comment"
+                      required></textarea>
                   </div>
                 </div>
                 <div class="order-form__options">

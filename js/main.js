@@ -10,6 +10,12 @@ const sliderItems = document.querySelectorAll(".reviews-card__item");
 const sliderList = document.querySelector(".reviews-card__list");
 const slideControls = document.querySelectorAll(".reviews-control__item");
 
+// переменные аккордиона команды
+const teamName = document.querySelectorAll(".team__name");
+const teamList = document.querySelector(".team__list");
+const teamInfo = document.querySelectorAll(".team__info");
+const teamListMobile = document.querySelector(".team-mobile__list");
+
 // МЕНЮ ГАМБУРГЕР И ПОЯВЛЕНИЕ МЕНЮ
 hamburger.addEventListener("click", function (event) {
   hamburger.classList.toggle("hamburger--active");
@@ -85,15 +91,6 @@ slideControls.forEach((dot, index) => {
 });
 
 // АККАРДИОН КОМАНДЫ
-
-// переменные аккордиона команды
-const teamName = document.querySelectorAll(".team__name");
-const teamList = document.querySelector(".team__list");
-const teamItem = document.querySelectorAll(".team__item");
-const teamInfo = document.querySelectorAll(".team__info");
-const teamContent = document.querySelectorAll(".team__content");
-const teamListMobile = document.querySelector(".team-mobile__list");
-
 teamName.forEach(function (e) {
   e.addEventListener("click", function (e) {
     e.preventDefault();
@@ -156,3 +153,60 @@ function accordionTeamMobile() {
 
 accordionTeam();
 accordionTeamMobile();
+
+// РАБОТА С ФОРМОЙ
+// переменные формы
+const myForm = document.querySelector(".order-form");
+const btnForm = document.querySelector(".order-button__form");
+
+btnForm.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (validateForm(myForm)) {
+    const date = {
+      name: myForm.elements.name.value,
+      phone: myForm.elements.phone.value,
+      comment: myForm.elements.comment.value,
+      to: myForm.elements.to.value,
+    };
+
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = "json";
+    xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+    xhr.setRequestHeader("content-type", "application/json");
+    xhr.send(JSON.stringify(date));
+
+    xhr.addEventListener("load", function () {
+      if (xhr.response.status) {
+        console.log("ОТПРАВЛЕНО");
+      }
+      console.log("НЕ ОТПРАВЛЕНО");
+    });
+  }
+});
+
+function validateForm(form) {
+  let valid = true;
+
+  if (!validateField(form.elements.name)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.phone)) {
+    valid = false;
+  }
+  if (!validateField(form.elements.comment)) {
+    valid = false;
+  }
+  return valid;
+}
+
+function validateField(field) {
+  if (!field.checkValidity()) {
+    field.style.outline = "3px solid red";
+
+    return false;
+  } else {
+    field.style.outline = "";
+    return true;
+  }
+}
