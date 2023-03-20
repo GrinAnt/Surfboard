@@ -1444,7 +1444,7 @@ body {
   }
 }
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -1463,6 +1463,7 @@ body {
   z-index: -9000;
   -webkit-transition: opacity 0.9s;
   transition: opacity 0.9s;
+  overflow-y: hidden;
 }
 .modal__box {
   display: -webkit-box;

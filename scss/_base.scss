@@ -6,6 +6,7 @@
 
 html {
   font-size: $font_size;
+  // overflow-y: hidden;
 }
 
 @media (max-width: $small_phone) {

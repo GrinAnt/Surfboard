@@ -16,6 +16,15 @@ const teamList = document.querySelector(".team__list");
 const teamInfo = document.querySelectorAll(".team__info");
 const teamListMobile = document.querySelector(".team-mobile__list");
 
+// переменные формы
+const myForm = document.querySelector(".order-form");
+const btnForm = document.querySelector(".order-button__form");
+const modal = document.querySelector(".modal");
+const modalMessage = document.querySelector(".modal__text");
+const btnModalClose = document.querySelector(".modal__btn");
+
+//////////////////////////////////////////////////////////////
+
 // МЕНЮ ГАМБУРГЕР И ПОЯВЛЕНИЕ МЕНЮ
 hamburger.addEventListener("click", function (event) {
   hamburger.classList.toggle("hamburger--active");
@@ -155,12 +164,8 @@ accordionTeam();
 accordionTeamMobile();
 
 // РАБОТА С ФОРМОЙ
-// переменные формы
-const myForm = document.querySelector(".order-form");
-const btnForm = document.querySelector(".order-button__form");
-const modal = document.querySelector(".modal");
-const modalMessage = document.querySelector(".modal__text");
-const btnModalClose = document.querySelector(".modal__btn");
+
+const body = document.querySelector(".body");
 
 btnForm.addEventListener("click", function (e) {
   e.preventDefault();
@@ -183,6 +188,7 @@ btnForm.addEventListener("click", function (e) {
         modal.style.opacity = "1";
         modal.style.zIndex = "9999";
         modalMessage.textContent = xhr.response.message;
+        body.style.overflow = "hidden";
       }
       // // if (xhr.response.status !== 1) {
       // modalMessage.textContent = "Отправить сообщение не удалось, повторите запрос позже";
@@ -194,12 +200,14 @@ btnForm.addEventListener("click", function (e) {
     btnModalClose.addEventListener("click", function () {
       modal.style.opacity = "0";
       modal.style.zIndex = "-9000";
+      body.style.overflow = "visible";
     });
 
     window.addEventListener("keydown", function (e) {
       if (e.code == "Escape") {
         modal.style.opacity = "0";
         modal.style.zIndex = "-9000";
+        body.style.overflow = "visible";
       }
     });
   }
