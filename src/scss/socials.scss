@@ -1,0 +1,27 @@
+.socials {
+  &__list {
+    display: flex;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(14px);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: rem(20px);
+    height: rem(20px);
+    fill: $social_grey;
+    transition: 0.6s;
+
+    &:hover {
+      fill: $black;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.menu {
+  position: relative;
+  background: #000 url("../img/background/accordion_1.jpg") center center / cover no-repeat;
+  // background-color: #000;
+  // opacity: 70%;
+  color: $white;
+
+  &__main-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding-left: 84px;
+    padding-top: 109px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: end;
+  }
+
+  &__item {
+    display: flex;
+    // @include tablets {
+    // }
+  }
+
+  &__link {
+    position: relative;
+    min-width: 102px;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    // @include phones {
+    //   min-width: 90px;
+    // }
+  }
+
+  &__title {
+    position: absolute;
+    left: 50%;
+    // bottom: 39px;
+    bottom: 0;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    font-size: 48px;
+    line-height: 1.2;
+  }
+
+  &__content {
+    background: rgba(51, 53, 55, 0.9);
+    backdrop-filter: blur(5px);
+    width: 0;
+    // padding: 31px 80px 31px 38px;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.7s;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}

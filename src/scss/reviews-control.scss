@@ -1,0 +1,28 @@
+.reviews-control {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(6px);
+  }
+
+  &__avatar {
+    border-radius: 50%;
+  }
+}
+
+.reviews-control__item--active .reviews-control__avatar {
+  outline: 6px solid $yellow;
+  outline-offset: -6px;
+}
+
+@media (max-width: $phone) {
+  .reviews-control {
+    &__avatar {
+      width: rem(64px);
+      height: rem(64px);
+    }
+  }
+}

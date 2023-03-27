@@ -1,0 +1,139 @@
+.player {
+  background-color: $grayish;
+
+  &__box {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 662px;
+    height: 392px;
+  }
+
+  &__content {
+    position: relative;
+    display: block;
+    width: 662px;
+    height: 392px;
+
+    &--active .player__splash {
+      display: none;
+    }
+  }
+
+  &__splash {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url("../img/icons/play.png") center center / 75px 110px no-repeat,
+      url("../img/background/player_splash.jpg") center center / cover no-repeat;
+    cursor: pointer;
+  }
+
+  &__controls {
+    position: absolute;
+    padding: 9px 22px 10px 18px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #404040;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    height: 16px;
+  }
+
+  &__playback-icon {
+    width: 11px;
+    height: 16px;
+    fill: $white;
+  }
+
+  &__time {
+    width: 446px;
+    height: 30px;
+  }
+
+  &__sound {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95px;
+  }
+
+  &__sound-icon {
+    width: 13px;
+    height: 17px;
+    fill: $white;
+  }
+}
+
+input[type="range"].slider-progress {
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--value) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 15px + var(--ratio) * (100% - 15px));
+}
+
+.player__time input[type="range"] {
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #626262;
+  cursor: pointer;
+}
+
+.player__time input[type="range"],
+.player__sound-range input[type="range"] {
+  background: linear-gradient(#fedb3f, #fedb3f) 0 / var(--sx) 100% no-repeat, #626262;
+}
+
+input[type="range"].player__time-line::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background: #fedb3f;
+  border: none;
+}
+
+input[type="range"].player__time-line::-moz-range-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background: #fedb3f;
+  border: none;
+}
+
+.player__sound-range input[type="range"] {
+  appearance: none;
+  width: 58px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #626262;
+  cursor: pointer;
+}
+
+input[type="range"].player__sound-line::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background: #fedb3f;
+  border: none;
+}
+
+input[type="range"].player__sound-line::-moz-range-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 30px;
+  background: #fedb3f;
+  border: none;
+}

@@ -1,0 +1,15 @@
+.reviews {
+  &__title {
+    text-align: center;
+    margin-bottom: rem(32px);
+  }
+}
+
+@media (max-width: $phone) {
+  .reviews {
+    &__title {
+      text-align: center;
+      margin-bottom: rem(26px);
+    }
+  }
+}
