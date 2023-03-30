@@ -7,6 +7,10 @@
     }
   }
 
+  &__item {
+    overflow: hidden;
+  }
+
   &__box {
     display: flex;
     justify-content: space-between;

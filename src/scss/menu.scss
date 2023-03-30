@@ -29,8 +29,6 @@
 
   &__item {
     display: flex;
-    // @include tablets {
-    // }
     &--active {
       @include phones {
         position: absolute;
@@ -72,7 +70,6 @@
   &__title {
     position: absolute;
     left: 50%;
-    // bottom: 39px;
     bottom: 0;
     transform: rotate(-90deg) translateY(-50%);
     transform-origin: 0 0;

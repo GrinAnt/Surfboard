@@ -5,6 +5,10 @@
 }
 
 @media (max-width: $tablets) {
+  .lol {
+    position: relative;
+  }
+
   .hamburger {
     position: fixed;
     top: rem(34px);
@@ -62,4 +66,9 @@
   &::after {
     transform: rotate(-90deg) translateX(8px);
   }
+}
+.hamburger-color--black > .hamburger__menu,
+.hamburger-color--black > .hamburger__menu::before,
+.hamburger-color--black > .hamburger__menu::after {
+  background-color: $black;
 }

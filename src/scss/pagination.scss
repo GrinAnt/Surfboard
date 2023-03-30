@@ -26,10 +26,32 @@
     border-radius: 50%;
     background-color: $white;
     text-align: center;
+    transition: 0.6s;
   }
 }
 
-.pagination__link--active > .pagination__link::after {
+.pagination__list-color--black .pagination__link::before {
+  background-color: $black;
+}
+
+.pagination__link--active > .pagination__link::after,
+.pagination__link:hover::after {
+  border: 1px solid $white;
+  padding: rem(7px);
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  position: absolute;
+  top: rem(3px);
+  right: rem(-5px);
+  transition: 0.6s;
+}
+
+.pagination__list-color--black .pagination__link::after {
+  border-color: $black;
+}
+
+.pagination__link::after:hover {
   border: 1px solid $white;
   padding: rem(7px);
   content: "";

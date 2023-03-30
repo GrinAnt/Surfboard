@@ -2,7 +2,6 @@ prepros.cfg
 prepros-6.config
 prepros.config
 .stylelintrc
-experiments.scss
 img/icons/SVG
 .vscode
 node_modules

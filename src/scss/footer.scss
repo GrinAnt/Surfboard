@@ -1,6 +1,13 @@
 .footer {
   padding-top: rem(17px);
+
   color: $dark_grey;
+  z-index: 1000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $white;
 
   &__box {
     display: flex;
