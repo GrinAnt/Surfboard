@@ -1,8 +1,6 @@
 .menu {
   position: relative;
   background: #000 url("../img/background/accordion_1.jpg") center center / cover no-repeat;
-  // background-color: #000;
-  // opacity: 70%;
   color: $white;
 
   &__main-title {
@@ -22,12 +20,27 @@
     left: 0;
     display: flex;
     justify-content: end;
+    overflow: hidden;
+
+    @include phones {
+      z-index: 1;
+    }
   }
 
   &__item {
     display: flex;
     // @include tablets {
     // }
+    &--active {
+      @include phones {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+      }
+    }
   }
 
   &__link {
@@ -37,9 +50,23 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    // @include phones {
-    //   min-width: 90px;
-    // }
+
+    &--active ~ .menu__content {
+      opacity: 1;
+      padding: 31px 80px 31px 38px;
+
+      @include tablets {
+        padding: 42px 53px 42px 38px;
+      }
+
+      @include phones {
+        padding: 29px 35px 29px 38px;
+      }
+    }
+
+    @include phones {
+      min-width: 90px;
+    }
   }
 
   &__title {
@@ -57,10 +84,10 @@
     background: rgba(51, 53, 55, 0.9);
     backdrop-filter: blur(5px);
     width: 0;
-    // padding: 31px 80px 31px 38px;
+    opacity: 0;
     position: relative;
     overflow: hidden;
-    transition: width 0.7s;
+    transition: opacity 0.7s cubic-bezier(0.05, 0.6, 0.4, 0.9);
     font-size: 16px;
     font-weight: 400;
     line-height: 1.5;

@@ -1,9 +1,3 @@
-// переменные аккордиона команды
-const teamName = document.querySelectorAll(".team__name");
-const teamList = document.querySelector(".team__list");
-const teamInfo = document.querySelectorAll(".team__info");
-const teamListMobile = document.querySelector(".team-mobile__list");
-
 // АККАРДИОН КОМАНДЫ
 teamName.forEach(function (e) {
   e.addEventListener("click", function (e) {

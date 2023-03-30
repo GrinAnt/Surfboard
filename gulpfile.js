@@ -7,12 +7,10 @@ const browserSync = require("browser-sync").create();
 const autoprefixer = require("gulp-autoprefixer");
 const clean = require("gulp-clean");
 const sassGlob = require("gulp-sass-glob");
-// const gcmq = require("gulp-group-css-media-queries");
 // const sourcemaps = require("gulp-sourcemaps");
 const babel = require("gulp-babel");
 const svgo = require("gulp-svgo");
 const svgSprite = require("gulp-svg-sprite");
-// const gulpif = require("gulp-if");
 
 // РАБОТА С ИЗОБРАЖЕНИЯМИ
 function images() {
@@ -54,10 +52,9 @@ function styles() {
           ignorePaths: ["main.scss"],
         })
       )
-      // .pipe(gcmq())
       .pipe(autoprefixer({ overrideBrowsersList: ["last 10 version"] }))
-      // .pipe(scss())
-      .pipe(scss({ outputStyle: "compressed" }))
+      .pipe(scss())
+      // .pipe(scss({ outputStyle: "compressed" }))
       // .pipe(sourcemaps.write())
       .pipe(dest("src/css"))
       .pipe(browserSync.stream())

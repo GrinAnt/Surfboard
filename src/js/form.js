@@ -1,11 +1,3 @@
-// переменные формы
-const myForm = document.querySelector(".order-form");
-const btnForm = document.querySelector(".order-button__form");
-const modal = document.querySelector(".modal");
-const modalMessage = document.querySelector(".modal__text");
-const btnModalClose = document.querySelector(".modal__btn");
-const body = document.querySelector(".body");
-
 // РАБОТА С ФОРМОЙ
 btnForm.addEventListener("click", function (e) {
   e.preventDefault();

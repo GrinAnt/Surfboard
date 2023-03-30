@@ -1,9 +1,3 @@
-// пременные слайдера отзыва
-const slider = document.querySelector(".reviews-card");
-const sliderItems = document.querySelectorAll(".reviews-card__item");
-const sliderList = document.querySelector(".reviews-card__list");
-const slideControls = document.querySelectorAll(".reviews-control__item");
-
 // СЛАЙДЕР ОТЗЫВОВ
 let sliderCount = 0;
 let sliderWidth = slider.offsetWidth;

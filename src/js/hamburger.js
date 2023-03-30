@@ -1,8 +1,3 @@
-// переменные меню
-let hamburger = document.querySelector(".hamburger");
-let navigation = document.querySelector(".navigation");
-let link = document.querySelectorAll(".navigation__link");
-
 hamburger.addEventListener("click", function (event) {
   hamburger.classList.toggle("hamburger--active");
   navigation.classList.toggle("navigation--active");
