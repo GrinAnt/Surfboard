@@ -17,21 +17,58 @@ btnForm.addEventListener("click", function (e) {
     xhr.send(JSON.stringify(data));
 
     xhr.addEventListener("load", function () {
-      if (xhr.response.status === 1) {
+      // try {
+      //   modal.style.opacity = "1";
+      //   modal.style.zIndex = "999999";
+      //   modalMessage.textContent = xhr.response.message;
+      //   body.style.overflowY = "hidden";
+      //   myForm.reset();
+      // } catch (err) {
+      // modal.style.opacity = "1";
+      // modal.style.zIndex = "999999";
+      // modalMessage.textContent = "Отправить сообщение не удалось, повторите запрос позже";
+      // body.style.overflowY = "hidden";
+      // }
+
+      if (xhr.status === 200) {
         modal.style.opacity = "1";
-        modal.style.zIndex = "9999";
+        modal.style.zIndex = "999999";
         modalMessage.textContent = xhr.response.message;
-        body.style.overflow = "hidden";
+        body.style.overflowY = "hidden";
+        document.body.style.position = "fixed";
+        display.style.position = "fixed";
+        myForm.reset();
       }
-      if (xhr.response.status === "") {
+      // if (xhr.response.status === "")
+      // if (xhr.status < 200)
+      else {
+        modal.style.opacity = "1";
+        modal.style.zIndex = "999999";
+        body.style.overflowY = "hidden";
+        document.body.style.position = "fixed";
         modalMessage.textContent = "Отправить сообщение не удалось, повторите запрос позже";
       }
     });
+
+    // $.ajax("https://webdev-api.loftschool.com/sendmail")
+    // .done((data) => {
+    //   modal.style.opacity = "1";
+    //   modal.style.zIndex = "999999";
+    //   modalMessage.textContent = xhr.response.message;
+    //   body.style.overflowY = "hidden";
+    // })
+    // .fail((err) => {
+    //   modal.style.opacity = "1";
+    //   modal.style.zIndex = "999999";
+    //   modalMessage.textContent = "Отправить сообщение не удалось, повторите запрос позже";
+    //   body.style.overflowY = "hidden";
+    // });
 
     btnModalClose.addEventListener("click", function () {
       modal.style.opacity = "0";
       modal.style.zIndex = "-9000";
       body.style.overflow = "visible";
+      display.style.overflow = "visible";
     });
 
     window.addEventListener("keydown", function (e) {

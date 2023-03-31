@@ -1,7 +1,3 @@
-// const sections = document.querySelectorAll("section");
-const sections = $("section");
-const display = document.querySelector(".maincontent");
-
 const mobileDetect = new MobileDetect(window.navigator.userAgent);
 const isMobile = mobileDetect.mobile();
 

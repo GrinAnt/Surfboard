@@ -628,11 +628,10 @@
             </div>
           </div>
         </section>
-        <section class="player" id="order" data-section-id="player" data-color-scheme="black">
+        <section class="player" data-section-id="player" data-color-scheme="black">
           <div class="container center">
             <h2 class="player__title title">Как мы работаем</h2>
-            <!-- OLD -->
-            <!-- <div class="player__section">
+            <div class="player__section">
               <div class="player__box">
                 <div class="player__content">
                   <div id="yt-player" class="player__elem"></div>
@@ -651,6 +650,7 @@
                       name="time-line"
                       id="time-line"
                       value="0" />
+                    <span class="player__progrss-point"></span>
                   </div>
                   <div class="player__sound">
                     <button class="player__button player__button-sound">
@@ -665,36 +665,7 @@
                         name="time-line"
                         id="time-line"
                         value="0" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-            <!-- END OLD -->
-            <!-- NEW -->
-            <div class="player-section__container">
-              <div class="player__box">
-                <div class="player__wrapper">
-                  <div id="yt-player" class="player__elem"></div>
-                  <div class="player__splash"></div>
-                </div>
-                <div class="player__controls">
-                  <button class="player__button player__start">
-                    <svg class="player__playback-icon" data-playback="">
-                      <use xlink:href="img/icons/sprite.svg#play"></use>
-                    </svg>
-                  </button>
-                  <div class="player__playback">
-                    <button class="player__playback-button"></button>
-                  </div>
-                  <div class="player__sound">
-                    <button class="player__button player__mute">
-                      <svg class="player__sound-icon" onclick="editVolume ();">
-                        <use xlink:href="img/icons/sprite.svg#volume"></use>
-                      </svg>
-                    </button>
-                    <div class="player__volume slider-progress">
-                      <button class="player__volume-control"></button>
+                      <span class="player__volume-point"></span>
                     </div>
                   </div>
                 </div>

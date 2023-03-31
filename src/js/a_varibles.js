@@ -25,3 +25,18 @@ const teamListMobile = document.querySelector(".team-mobile__list");
 
 // переменные горизонтального аккордиона
 const itemLinks = document.querySelectorAll(".menu__link");
+
+//переменные плеера
+const btnPlayback = document.querySelector(".player__button-playback");
+const btnPlay = document.querySelector(".player__playback-icon");
+const content = document.querySelector(".player__content");
+const playerBox = document.querySelector(".player__box");
+const volume = document.querySelector(".player__sound-line");
+const progress = document.querySelector(".slider-progress");
+const progressPoint = document.querySelector(".player__progrss-point");
+const screenPlayer = document.querySelector(".player__splash");
+const volumePoint = document.querySelector(".player__volume-point");
+
+// переменные Scroll One Page
+const sections = $("section");
+const display = document.querySelector(".maincontent");
