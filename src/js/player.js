@@ -84,29 +84,29 @@ eventInit();
 //
 
 // Обновляем прогресс
-function updateProgressBar() {
-  //   const line_width = $(".player__playback").width();
-  const persent = (player.getCurrentTime() / player.getDuration()) * 100;
-  //   $(".player__playback").css("width", persent * line_width);
-  //   per = persent * 100;
-  $(".player__playback-button").css("left", persent + "%");
-  console.log(persent);
-}
-// updateProgressBar();
+// function updateProgressBar() {
+//   //   const line_width = $(".player__playback").width();
+//   const persent = (player.getCurrentTime() / player.getDuration()) * 100;
+//   //   $(".player__playback").css("width", persent * line_width);
+//   //   per = persent * 100;
+//   $(".player__playback-button").css("left", persent + "%");
+//   console.log(persent);
+// }
+// // updateProgressBar();
 
-/*Линия прогресса*/
-function progress(event) {
-  var line_width = $(".player__playback").width();
-  // положение элемента
-  var pos = $(".player__playback").offset();
-  var elem_left = pos.left;
-  // положение курсора внутри элемента
-  var Xinner = event.pageX - elem_left;
-  var newTime = player.getDuration() * (Xinner / line_width);
-  // Skip video to new time.
-  player.seekTo(newTime);
-  console.log(newTime);
-}
+// /*Линия прогресса*/
+// function progress(event) {
+//   var line_width = $(".player__playback").width();
+//   // положение элемента
+//   var pos = $(".player__playback").offset();
+//   var elem_left = pos.left;
+//   // положение курсора внутри элемента
+//   var Xinner = event.pageX - elem_left;
+//   var newTime = player.getDuration() * (Xinner / line_width);
+//   // Skip video to new time.
+//   player.seekTo(newTime);
+//   console.log(newTime);
+// }
 
 //
 //
