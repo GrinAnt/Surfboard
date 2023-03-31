@@ -1501,7 +1501,7 @@ body {
   width: 662px;
   height: 392px;
 }
-.player__content--active .player__splash {
+.player .player__box--active .player__splash {
   display: none;
 }
 .player__splash {
@@ -1533,9 +1533,41 @@ body {
   height: 16px;
   fill: #fff;
 }
-.player__time {
+.player__playback {
   width: 446px;
-  height: 30px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #626262;
+  position: relative;
+  cursor: pointer;
+}
+.player__playback-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: -5px;
+  left: 0;
+  background-color: #fedb3f;
+  position: absolute;
+  cursor: pointer;
+}
+.player__volume {
+  width: 58px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #626262;
+  position: relative;
+  cursor: pointer;
+}
+.player__volume-control {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: -5px;
+  left: 0;
+  background-color: #fedb3f;
+  position: absolute;
+  cursor: pointer;
 }
 .player__sound {
   display: flex;
@@ -1547,71 +1579,6 @@ body {
   width: 13px;
   height: 17px;
   fill: #fff;
-}
-
-input[type=range].slider-progress {
-  --range: calc(var(--max) - var(--min));
-  --ratio: calc((var(--value) - var(--min)) / var(--range));
-  --sx: calc(0.5 * 15px + var(--ratio) * (100% - 15px));
-}
-
-.player__time input[type=range] {
-  appearance: none;
-  width: 100%;
-  height: 4px;
-  border-radius: 1px;
-  background-color: #626262;
-  cursor: pointer;
-}
-
-.player__time input[type=range],
-.player__sound-range input[type=range] {
-  background: linear-gradient(#fedb3f, #fedb3f) 0/var(--sx) 100% no-repeat, #626262;
-}
-
-input[type=range].player__time-line::-webkit-slider-thumb {
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 30px;
-  background: #fedb3f;
-  border: none;
-}
-
-input[type=range].player__time-line::-moz-range-thumb {
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 30px;
-  background: #fedb3f;
-  border: none;
-}
-
-.player__sound-range input[type=range] {
-  appearance: none;
-  width: 58px;
-  height: 4px;
-  border-radius: 1px;
-  background-color: #626262;
-  cursor: pointer;
-}
-
-input[type=range].player__sound-line::-webkit-slider-thumb {
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 30px;
-  background: #fedb3f;
-  border: none;
-}
-
-input[type=range].player__sound-line::-moz-range-thumb {
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 30px;
-  background: #fedb3f;
-  border: none;
 }
 
 .reviews-card {

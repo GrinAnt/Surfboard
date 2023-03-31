@@ -11,13 +11,6 @@ let hamburger = document.querySelector(".hamburger");
 let navigation = document.querySelector(".navigation");
 let link = document.querySelectorAll(".navigation__link");
 
-//переменные плеера
-const btnPlayback = document.querySelector(".player__button-playback");
-const btnPlay = document.querySelector(".player__playback-icon");
-const content = document.querySelector(".player__content");
-const playerBox = document.querySelector(".player__box");
-const volume = document.querySelector(".player__sound-line");
-
 // пременные слайдера отзыва
 const slider = document.querySelector(".reviews-card");
 const sliderItems = document.querySelectorAll(".reviews-card__item");
